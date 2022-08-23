@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    do{
+        cout<<"Hello"<<endl;
+    }while(true);
+
+    return 0;
+}
