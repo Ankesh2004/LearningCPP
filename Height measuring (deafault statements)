@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+float HeightIncreased(float Height, float factor=1.08) {
+    return Height*factor;
+}
+
+int main() {
+    int height;
+    cout<<"Welcome, enter your height to know what will be your height after 1 year"<<endl;
+    cin>>height;
+
+    cout<<"Your height after 1 year will be= "<<HeightIncreased(height)<<endl;
+    cout<<"FOR PEOPLE DRINKING HORLICKS:Your height after 1 year will be= "<<HeightIncreased(height,1.10)<<endl;
+
+
+}
