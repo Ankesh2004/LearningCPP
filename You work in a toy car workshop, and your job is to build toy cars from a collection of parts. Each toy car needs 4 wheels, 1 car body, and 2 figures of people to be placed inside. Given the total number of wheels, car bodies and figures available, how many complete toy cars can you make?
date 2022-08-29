@@ -2,7 +2,7 @@
 using namespace std;
 
 int cars(int wheel, int seat, int body){
-      return std::min(std::min(wheel,seat),body);
+      return std::min(std::min(wheel/4,seat/2),body);
       }
   
 
