@@ -1,29 +1,10 @@
 #include<iostream>
 using namespace std;
 
-int materials(int wheel, int seat, int body){
+int cars(int wheel, int seat, int body){
+      return std::min(std::min(wheel,seat),body);
+      }
   
-  int w,s,b;
-  w= wheel/4;
-  s= seat/2;
-  b= body;
-
-  if(w==0||s==0||b==0){
-    return 0;
-  }
-
-  else if(((w<s)&&(s<b))||((w<b)&&(b<s))){
-    return w;
-  }
-
-  else if(((b<w)&&(w<s))||((b<s)&&(s<w))){
-    return b;
-  }
-
-  else if(((s<b)&&(b<w))||((s<w)&&(w<b))){
-    return s;
-  }
-}
 
 int main() {
   int a,b,c;
@@ -34,7 +15,7 @@ int main() {
   cout<<"enter number of bodies"<<endl;
   cin>>c;
 
-  cout<<"Cars can be made = "<<materials(a,b,c)<<endl;
+  cout<<"Cars can be made = "<<cars(a,b,c)<<endl;
 
 
     return 0;
