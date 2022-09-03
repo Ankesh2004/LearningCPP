@@ -1,0 +1,25 @@
+#include<iostream>
+
+int fib(int p){
+
+    if(p<2&&p>0){
+        return 1;
+    }
+    
+    else if(p==0) {
+        return 0;
+    }
+    else{
+    return fib(p-1)+fib(p-2);
+    }
+}
+
+int main() {
+    int a;
+    std::cout<<"Enter a number"<<"\n";
+    std::cin>>a;
+    std::cout<<"Fibonacci at position "<<a<< " is "<< fib(a);
+
+
+    return 0;
+}
