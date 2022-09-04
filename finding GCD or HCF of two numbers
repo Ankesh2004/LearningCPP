@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int i,a,b;
+    cout<<"Enter two numbers "<<endl;
+    cin>>a>>b;
+
+    if(a>b){
+        for(i=a;i>1;i--){
+            if((a%i==0)&&(b%i==0)){
+                cout<<i;
+                break;
+            }
+
+            else{
+                continue;
+            }
+        }
+    }
+
+     if(b>a){
+        for(i=b;i>1;i--){
+            if((a%i==0)&&(b%i==0)){
+                cout<<i;
+                break;
+            }
+
+            else{
+                continue;
+            }
+        }
+    }
+
+    if(a==b){
+        cout<<a<<endl;
+    }
+
+    return 0;
+}
