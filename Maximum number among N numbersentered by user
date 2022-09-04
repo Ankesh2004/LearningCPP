@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    int n,i;
+    int maxNumber=0;
+
+    cout<<"How many numbers you want to compare?\n";
+    cin>>n;
+
+    for(i=1;i<=n;i++){
+        int currentNumber;
+        cout<<"Enter number "<<i<<endl;
+        cin>>currentNumber;
+
+        if(currentNumber>=maxNumber){
+            maxNumber=currentNumber;
+
+        }
+
+        else {
+            continue;
+        }
+
+    }
+
+    cout<<"The maximum number among these is = "<<maxNumber<<endl;
+
+    return 0;
+}
