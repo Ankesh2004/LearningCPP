@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+ int fib(int n){
+    if(n>1){
+    return fib(n-1)+fib(n-2);
+    }
+    else if(n==0){
+        return 0;
+    }
+
+    else if(n==1){
+        return 1;
+    }
+}
+
+int main() {
+
+    int i,N;
+    cout<<"Enter the number"<<endl;
+    cin>>N;
+
+
+    for(i=0;i>=0;i++){
+ 
+        if(fib(i)==N){
+            cout<<"Yes, "<<N<<" belongs to fibonacci squence"<<endl;
+            break;
+        }
+        else {
+            
+            if(fib(i)>N){
+                 cout<<"No, "<<N<<" does not belongs to fibonacci squence"<<endl;
+                break;
+
+            }
+         continue;
+        }
+
+    
+    }
+
+
+
+    return 0;
+}
