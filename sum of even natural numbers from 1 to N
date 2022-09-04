@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    int n,i;
+    int sum{0}; 
+    cout<<"Enter the number "<<endl;                    
+   cin>>n;
+   cout<<"Even numbers from 1 to "<<n<<" are as follows"<<endl;
+
+    for(i=1;i<=n;i++){
+
+        if(i%2==0){ 
+            sum=sum+i;
+            cout<<i<<endl;
+        }
+
+        else{
+            continue;
+        }
+    }
+
+    cout<<"Sum of even numbers from 1 to "<<n<<" is "<<sum<<endl;
+
+    return 0;
+}
