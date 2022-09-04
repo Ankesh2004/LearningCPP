@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int i,n;
+    
+    cout<<"Enter the number "<<endl;
+    cin>>n;
+
+    if(abs(n)>2){
+
+        for(i=3;i<=n;i++){
+            if((n%i==0)&&(i!=n)){
+                cout<<"Not Prime"<<endl;
+                break;
+            }
+            else{
+                cout<<"Prime"<<endl;
+                break;
+            }
+        }
+
+    }
+
+    if(abs(n)==2){
+     cout<<"Prime"<<endl;
+    }
+
+    if(abs(n)==1||n==0){
+         cout<<"Not Prime"<<endl;
+    }
+
+
+    return 0;
+}
