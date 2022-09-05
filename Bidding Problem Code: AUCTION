@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t,a,b,c,m;
+	cin>>t;
+	while(t--){
+        cin>>a>>b>>c;
+	    m=max(a,max(b,c));
+	    
+	    if(m==a){
+	        cout<<"Alice"<<endl;
+	    }
+	    
+	    else if(m==b){
+	        cout<<"Bob"<<endl;
+	    }
+	    
+	    else{
+	        cout<<"Charlie"<<endl;
+	    }
+	}
+	return 0;
+}
