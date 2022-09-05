@@ -1,0 +1,18 @@
+{
+int t,x,y;
+cin>>t;
+ 
+ while(t--){
+     cin>>x;
+     cin>>y;
+     
+     if((y>=x)&&(y<=(x+200))){
+         cout<<"YES"<<endl;
+     }
+     
+     else{
+         cout<<"NO"<<endl;
+     }
+ }
+	return 0;
+}
