@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t,x;
+	
+	cin>>t;
+	
+	while(t--){
+	    cin>>x;
+	    cout<<100-((100*x)/100)<<endl;
+	}
+	return 0;
+}
