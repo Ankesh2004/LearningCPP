@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int x,n,i,pro;
+	cin>>x>>n;
+	pro=1;
+
+	for(i=1;i<=n;i++){
+		pro=pro*x;
+	}
+	cout<<pro;
+
+	return 0;
+}
