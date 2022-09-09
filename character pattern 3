@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    int n,i,j;
+    char A;
+    cin>>n;
+
+    for(i=1;i<=n;i++){
+        for(j=i;j<(3*i-1);j++){
+            cout<<char('A'+(j-1));
+        }
+        cout<<endl;
+    }
+
+
+    return 0;
+}
