@@ -13,9 +13,9 @@ cout<<"How many numbers to compare?"<<endl;
         cin>>num[i];
     }
 
-    m=num[0];
+    m=0;
 
-    for(j=1;j<n;j++){
+    for(j=0;j<n;j++){
         m= (max(num[j],m));
 
     }
