@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n,i,j,m,p;
+    cin>>n;
+
+    for(i=1;i<(n+1);i++){
+        
+       for(j=1;j<=(n-i);j++){
+        cout<<" ";
+       }
+
+       for(m=i;m>1;m--){
+        cout<<m;
+       }
+
+       for(p=1;p<=i;p++){
+        cout<<p;
+       }
+
+       cout<<endl;
+
+
+       
+       }
+    return 0;
+}
