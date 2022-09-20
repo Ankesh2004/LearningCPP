@@ -1,4 +1,5 @@
 #include<iostream>
+#include<climits>
 using namespace std;
 
 int main() {
@@ -13,7 +14,7 @@ cout<<"How many numbers to compare?"<<endl;
         cin>>num[i];
     }
 
-    m=0;
+    m=INT_MIN;
 
     for(j=0;j<n;j++){
         m= (max(num[j],m));
