@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int n;
+
+int sumOfArray( int *input,int n){
+    int sum=0;
+    
+    for(int i=0;i<n;i++){ 
+        sum= sum + input[i];
+
+    }
+    return sum;
+}
+
+int main() {
+    
+    cin>>n;
+    int input[n];
+
+    for(int i=0;i<n;i++){
+        cin>>input[i];
+    }
+
+    cout<<"Sum is "<< sumOfArray( input,n);
+
+    return 0;
+}
