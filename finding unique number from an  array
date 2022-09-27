@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+void findUnique(int a[],int n){
+    for(int j=0;j<n;j++){
+        int count=0; 
+        int k;
+        for( k=0;k<n;k++){
+            if(a[k]==a[j]){
+                count++;
+            }
+            else{
+                continue;
+            }
+            
+        }
+         if(count<2){
+            cout<<a[j];
+
+            }
+            else{
+            continue;
+        }
+       
+    }
+}
+int main() {
+
+    int n;
+    int a[100];
+    cin>>n;
+
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+
+    findUnique(a,n);
+
+    
+
+    return 0;
+}
