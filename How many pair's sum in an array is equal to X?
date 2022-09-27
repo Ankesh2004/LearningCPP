@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+void pairSum(int a[],int n, int x){
+    int counter=0;
+    for(int i=0;i<n;i++){
+        
+        for(int j=0;j<n;j++){
+            if((a[i]+a[j])==x){
+                counter++;
+            }else{
+                continue;
+            }
+
+        }
+    }
+    cout<<counter/2;
+
+}
+
+int main() {
+    int n,x;
+    cin>>n;
+    cin>>x;
+
+    int a[1000];
+
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+ 
+    pairSum(a,n,x);
+
+    return 0;
+}
