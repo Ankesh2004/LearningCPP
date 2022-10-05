@@ -1,0 +1,28 @@
+void binarySearch(int arr[],int x, int n){
+    int s=0;
+    int e=(n-1);
+
+   while(s<=e){
+    int mid=(s+e)/2;
+
+    if(arr[mid]==x){
+        cout<<mid;
+        break;
+       
+    }
+    
+     else if(x>arr[mid]){
+        s=mid+1;
+    
+    }
+    else {
+        e=mid-1;
+        
+    }
+
+        }
+
+        if(s>e){
+            cout<<-1;
+        }
+}
