@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+
+int findLengthOfString(char a[]){
+    int count=0;
+    int i=0;
+
+    while(a[i]!='\0'){
+        i++;
+        count++;
+
+    }
+
+    return count;
+}
+
+void checkPallindrome(char a[], int n){
+    
+    char b[100];
+    int j=0;
+    int count=0;
+
+    for(int i=(n-1);i>=0;i--){
+        b[j]=a[i];
+        j++;
+    }
+
+    for(int i=0;i<n;i++){
+        if(a[i]==b[i]){
+            count++;
+
+        }
+    }
+
+    if(count==n){
+        cout<<"true";
+    }
+    else{
+        cout<<"false";
+    }
+
+
+
+}
+
+int main() {
+
+    char a[100];
+
+    cin>>a;
+    int n= findLengthOfString(a);
+    checkPallindrome(a,n);
+
+
+
+    return 0;
+}
