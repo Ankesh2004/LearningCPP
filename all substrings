@@ -1,0 +1,38 @@
+#include <iostream>
+#include<cstring>
+using namespace std;
+
+void subStrings(char input[], int n){
+    
+    
+    for(int m=0;m<n;m++){
+        
+        
+        for(int i=m;i<n;i++){
+            for(int j=m;j<=i;j++){
+            
+            if(input=='\0'){
+                break;
+            }
+            else{
+                cout<<input[j];
+            }
+        }
+        cout<<endl;
+        
+        }
+    }
+}
+
+int main() {
+    char input[100];
+    
+    cin>>input;
+    int n=strlen(input);
+    
+    subStrings(input,n);
+    
+    
+
+    return 0;
+}
