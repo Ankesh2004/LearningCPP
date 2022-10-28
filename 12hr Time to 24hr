@@ -1,0 +1,78 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+void to24Hr(string s, int n){
+    string str;
+    str+=s[0];
+    str+=s[1];
+    
+    int hh= stoi(s);
+    
+    if(s[8]=='A'){
+        if(hh==12){
+            cout<<"00";
+            
+            for(int i=2;i<n-2;i++){
+                cout<<s[i];
+            }
+            
+        }
+        
+        else{
+            for(int i=0;i<n-2;i++){
+                cout<<s[i];
+            }
+            
+            
+        }
+    }
+    
+    else{
+        if(hh!=12){
+            hh+=12;
+        cout<<hh;
+        
+         for(int i=2;i<n-2;i++){
+                cout<<s[i];
+            }
+        }
+        
+        else{
+             for(int i=0;i<n-2;i++){
+                cout<<s[i];
+            }
+        }
+        
+    }
+    
+    
+}
+
+int main(){
+    string s;
+    
+    cin>>s;
+    int n= s.size();
+    
+    to24Hr(s, n);
+    
+    return 0;
+   
+    
+}
+/*
+This code converts a given time in 12 hour format to 24 hour format.
+The input is given as a string, and the output is also given as a string.
+
+For example, if the input string is "07:05:45PM", the output string should be "19:05:45".
+
+The code first checks if the given time is in the AM or PM.
+If the time is in the AM, it checks if the hour is 12.
+If the hour is 12, it prints "00" followed by the rest of the string except for the last two characters.
+If the hour is not 12, it prints the string as it is except for the last two characters.
+
+If the time is in the PM, it checks if the hour is 12.
+If the hour is 12, it prints the string as it is except for the last two characters.
+If the hour is not 12, it adds 12 to the hour and prints the resulting string except for the last two characters.
+*/
