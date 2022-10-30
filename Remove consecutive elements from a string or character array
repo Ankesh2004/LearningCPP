@@ -1,0 +1,35 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+void removeConsecutiveCharacters(char input[], int n){
+    int j=0;
+
+    for(int i=0;i<n;i++){
+
+        if(i==0){
+            input[j]=input[i];
+        }
+        else if(input[i]!=input[i-1]){
+            ++j;
+            input[j]= input[i];
+        }
+    }
+
+    input[j+1]='\0';
+
+
+}
+
+int main() {
+
+    char input[100];
+    cin>>input;
+    int n= strlen(input);
+
+    cout<<input<<endl;
+    removeConsecutiveCharacters(input,n);
+    cout<<input;
+
+    return 0;
+}
