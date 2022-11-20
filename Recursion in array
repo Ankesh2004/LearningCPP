@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+int sorted(int i, int *arr,int n){
+
+	
+	if(arr[i]>arr[i+1]){
+		return 0;
+		
+	}
+
+	else if(i==(n-1)){
+		return 1;
+		
+	}
+
+	return sorted(i+1, arr,n);
+}
+
+int main() {
+
+//this code checks whether an array is sorted or not, it returns 1 if it is, and 0 in the other case
+int n;
+cin>>n;
+	int *arr= new int[n]; //here we allocated memory dynamically in heap
+
+	for(int i=0;i<n;i++){
+		cin>>arr[i];
+	}
+
+	int a=sorted(0,arr,n);
+	
+	cout<<a;
+
+
+	return 0;
+}
