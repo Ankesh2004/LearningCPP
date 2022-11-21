@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+int sum(int *arr,int n){
+
+	if(n==1){
+		return arr[n-1];
+	}
+
+	int smalloutput= sum(arr+1,(n-1));
+	int output= arr[0]+smalloutput;
+
+	return output;
+	
+}
+
+
+int main() {
+int n;
+cin>>n;
+	int *arr= new int[n];
+
+	for(int i=0;i<n;i++){
+		cin>>arr[i];
+	}
+
+	int a= sum(arr,n);
+	cout<<a;
+
+
+	return 0;
+}
