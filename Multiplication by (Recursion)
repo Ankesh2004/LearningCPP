@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int multiply(int m, int n){
+    if(m==0||n==0){
+        return 0;
+    }
+
+    int smalloutput= multiply(m,n-1);
+    int finaloutput= m+ smalloutput;
+
+    return finaloutput;
+}
+
+int main() {
+
+    int m,n;
+    cin>>m>>n;
+    
+    int a=multiply(m,n);
+    cout<<a;
+
+
+    return 0;
+}
