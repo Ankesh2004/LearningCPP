@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+void highLow(int s, int e){
+    int mid= (s+e)/2;
+    char chr1,chr2;
+    
+    cout<<"Is your number = "<<mid<<" ?"<<endl;
+    
+    cin>>chr1;
+    
+    if(chr1=='y'){
+        cout<<"Your number is "<< mid;
+    }
+    else{
+
+        cout<<"High or low?"<<endl;
+        cin>>chr2;
+        
+        if(chr2=='h'){
+            return highLow(mid+1,e);
+        }
+        
+        else if(chr2=='l'){
+            return highLow(s,mid);
+        }
+        
+    }
+}
+int main() {
+    
+    int m,n;
+    cin>>m>>n;
+
+highLow(m,n);
+    
+
+    return 0;
+}
