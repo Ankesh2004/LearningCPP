@@ -1,0 +1,13 @@
+ void replaceByX(char s[], char a,char x){
+        if(s[0]=='\0'){
+            return ;
+        }
+        if(s[0]=='a'){
+            s[0]='x';
+            return replaceByX(s+1,a,x);
+        }
+        else{
+            return replaceByX(s+1,a,x);
+        }
+
+    }
