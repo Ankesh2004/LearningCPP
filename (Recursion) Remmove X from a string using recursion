@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+void removeX(char s[]){
+
+    if(s[0]=='\0'){
+        return ;
+    }
+
+    if(s[0]!='x'){
+        return removeX(s+1);
+    }
+
+    if(s[0]=='x'){
+        s[0]=='\0';
+        int i=1;
+        for(;s[i]!='\0';i++){
+            s[i-1]=s[i];
+        }
+        s[i-1]=s[i];
+        return removeX(s+1);
+    }
+
+    
+
+}
+
+int main()
+{
+    char s[100];
+    
+    cin>>s;
+    int l=length(s);
+
+    removeX(s);
+    for(int i=0;i<l;i++){
+        cout<<s[i];
+    }
+    
+    
+
+    return 0;
+}
