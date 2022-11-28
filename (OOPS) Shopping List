@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+int i=0;
+class Shop{
+        int itemId[100];
+        int itemPrice[100];
+        int num;
+
+        public:
+        void setItemId(void);
+        void setItemPrice(void);
+        
+
+        void displayItemDetails(int);
+    };
+
+    void Shop::setItemId(void)
+    {cout<<"Enter the item id of item "<<i +1<<endl; 
+        cin>>itemId[i];
+
+    }
+
+    void Shop::setItemPrice(void){
+        cout<<"Enter price of item "<<i<<endl;
+        cin>>itemPrice[i];
+    }
+
+    void Shop::displayItemDetails(int n){
+       for(int i=0;i<n;i++){
+        cout<<i+1<<" || ";
+        cout<<itemId[i]<<" || ";
+        cout<<itemPrice[i]<<endl;
+       }
+    }
+
+int main() {
+
+    Shop dukaan;
+    int n;
+    cout<<"Enter the number of items"<<endl;
+    cin>>n;
+
+    for(;i<n;i++){
+    dukaan.setItemId();
+    dukaan.setItemPrice();
+    }
+
+    dukaan.displayItemDetails(n);
+
+    return 0;
+}
