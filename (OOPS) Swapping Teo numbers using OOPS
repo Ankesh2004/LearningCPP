@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+
+class c2;
+
+class c1{
+    int val1;
+
+    friend void swapNumber(c1 &,c2 & );
+
+    public:
+    void inData(int a){
+        val1= a; //To take input of a private data type(val1) without making it public :-) 
+    }
+
+    void displayData(void){
+        cout<<"Value 1 is "<< val1<<endl;
+    }
+
+};
+
+class c2{
+    int val2;
+    friend void swapNumber(c1 &,c2 & );
+
+    public:
+    void inData(int b){
+        val2= b; 
+    }
+
+    void displayData(void){
+        cout<<"Value 2 is "<< val2<<endl;
+    }
+
+};
+
+void swapNumber(c1 &x,c2 &y ){
+    int temp= x.val1;
+    x.val1=y.val2;
+    y.val2=temp;
+
+    cout<<"Now Val1= "<<x.val1<< " & Val2= "<<y.val2<<endl;
+}
+
+int main() {
+
+    c1 x;
+    c2 y;
+
+    x.inData(3);
+    x.displayData();
+
+    y.inData(4);
+    y.displayData();
+    
+    swapNumber(x,y);
+
+    return 0;
+}
