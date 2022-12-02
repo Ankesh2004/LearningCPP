@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+class Complex{
+    int a,b;
+    
+    public:
+    
+    Complex(void);
+    
+   void printNumber(int a,int b){
+       cout<< " a is = "<<a<<" b is = "<<b;
+   }
+};
+
+Complex::Complex(void){
+    cout<<"Hi bhai\n";
+}
+
+int main()
+{
+    Complex o1,o2,o3; // constructor runs the number of times we make an object in the class(for example it prints hi bhai 3 times here)
+    o1.printNumber(2,5);
+    
+
+    return 0;
+}
