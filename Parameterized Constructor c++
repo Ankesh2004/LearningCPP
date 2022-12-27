@@ -1,0 +1,37 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+
+class Points{
+	int x,y;
+public:
+	
+
+   Points(int a, int b){
+	x=a;
+	y=b;
+   }
+
+   int distance(Points p1,Points p2){
+	int a= p1.x-p2.x;
+	int b= p1.y-p2.y;
+	int dist=sqrt(a*a+b*b);
+
+	return dist;
+   }
+
+
+};
+
+
+int main() {
+
+	Points p1(0,1), p2(5,13);
+	int dist = p1.distance(p1,p2);
+
+	cout<<dist;
+
+
+	return 0;
+}
