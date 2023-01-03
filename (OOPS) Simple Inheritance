@@ -1,0 +1,60 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+//An example of single inheritance 
+
+class  SimpleCalculator{
+
+	public:
+	float a,b;
+
+	float getValue(void){
+		cout<<"Enter two numbers\n";
+		cin>>a>>b;
+	}
+
+	float add(void){
+		return (a+b);
+	}
+
+	float difference(void){
+
+		int ans=((a-b));
+		return ans;
+	}
+
+	float multiply(void){
+		return (a*b);
+	}
+	float divide(void){
+		return (a/b);
+	}
+
+};
+
+class ScientificCalculator: public SimpleCalculator{
+
+	public:
+	float power(void){
+		return (pow(a,b));
+	}
+
+	float root(void){
+		return sqrt(a);
+	}
+
+};
+
+int main() {
+
+	ScientificCalculator A;
+	int a,b;
+	A.getValue(a,b);
+
+	cout<<A.power();
+
+
+
+	return 0;
+}
